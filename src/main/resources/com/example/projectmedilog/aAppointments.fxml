@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Appointment_AnchorPane" prefHeight="800.0" prefWidth="1050.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmedilog.aAppointmentsController">
+   <children>
+      <Button fx:id="BTN_NewAppointment" layoutX="745.0" layoutY="117.0" mnemonicParsing="false" onAction="#onCLickedBTN_NewAppointment" onMouseEntered="#onMouseEnteredBTN_NewAppointment" prefHeight="45.0" prefWidth="170.0" style="-fx-background-color: #0080ff;" text="New Appoinment" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text fill="#0080ff" layoutX="400.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <TableView fx:id="aAppointmentTable" layoutX="15.0" layoutY="188.0" onMouseClicked="#getitem" prefHeight="600.0" prefWidth="1020.0" stylesheets="@../../../Style/table.css">
+         <columns>
+            <TableColumn fx:id="TC_id" prefWidth="163.73340970277786" text="Id" visible="false" />
+            <TableColumn fx:id="TC_name" prefWidth="163.73340970277786" text="Name" />
+            <TableColumn fx:id="TC_UserName" minWidth="0.0" prefWidth="141.0" text="User Name" />
+            <TableColumn fx:id="TC_date" prefWidth="123.0" text="Date" />
+            <TableColumn fx:id="TC_time" minWidth="0.0" prefWidth="118.0" text="Time" />
+            <TableColumn fx:id="TC_mobile" prefWidth="150.0" text="Mobile" />
+            <TableColumn fx:id="TC_doctor" minWidth="8.00006103515625" prefWidth="117.0" text="Doctor" />
+            <TableColumn fx:id="TC_injury_or_condition" minWidth="0.0" prefWidth="200.0" text="Injury/Condition" />
+         </columns>
+      </TableView>
+      <ImageView fx:id="BTN_Refresh" fitHeight="50.0" fitWidth="50.0" layoutX="951.0" layoutY="114.0" onMouseClicked="#onCLickedBTN_Refresh" onMouseEntered="#onMouseEnteredBTN_Refresh" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/refresh.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
